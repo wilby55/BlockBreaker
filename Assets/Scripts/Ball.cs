@@ -36,7 +36,6 @@ public class Ball : MonoBehaviour {
         if (collision.transform.gameObject.name == "Paddle")
         {
             paddleToBallVectorX = (this.transform.position.x - paddle.transform.position.x) * 15;
-            print("paddleVector: " + paddleToBallVectorX);
 
             Vector2 tweak = new Vector2(paddleToBallVectorX, 10f);
             this.GetComponent<Rigidbody2D>().velocity = tweak;
